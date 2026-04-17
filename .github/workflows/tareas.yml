@@ -1,0 +1,17 @@
+name: Tarea_GitFlow
+
+on:
+  pull_request:
+    branches: [ "develop" ] # Esto cumple el requisito 3 de tu tarea
+
+jobs:
+  proceso-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: a- Build
+        run: echo "Ejecutando el paso Build..."
+
+      - name: b- Test
+        run: echo "Ejecutando el paso Test..."
